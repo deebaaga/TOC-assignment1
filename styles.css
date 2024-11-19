@@ -11,6 +11,18 @@
   font-optical-sizing: auto;
   font-style: bold;
 }
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column; /* Stack header content vertically */
+    gap: 10px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+
 body {
   font-family: "Montserrat", sans-serif;
   margin: 0;
@@ -39,11 +51,18 @@ header {
 
 /* Header Images */
 .header-image {
-  width: 100px; /* Adjust size as needed */
-  height: 100px;
+  width: 140px; /* Adjust size as needed */
+  height: 140px;
   border-radius: 50%; /* Makes the image circular */
   object-fit: cover; /* Keeps the image proportionate */
-  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.5); /* Optional shadow */
+  box-shadow: 0 3px 40px rgba(255, 255, 255, 0.703); /* Optional shadow */
+}
+.header-image {
+  transition: transform 0.3s ease;
+}
+
+.header-image:hover {
+  transform: scale(1.1); /* Slight zoom effect */
 }
 
 /* Header Text Styling */
@@ -94,7 +113,7 @@ header p {
 }
 
 .section {
-  padding: 50px 20px;
+  padding: 70px 20px;
   text-align: center;
 }
 
@@ -132,7 +151,8 @@ header p {
 
 .cta-button {
   display: inline-block;
-  padding: 10px 20px;
+  padding: 15px 30px;
+  font-size: 1.2rem;
   margin-top: 20px;
   background-color: var(--pastel-pink);
   color: #000000;
